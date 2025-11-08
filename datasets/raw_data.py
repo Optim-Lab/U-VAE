@@ -2,34 +2,7 @@
 import pandas as pd
 #%%
 def load_raw_data(dataset):
-    if dataset == "abalone":
-        data = pd.read_csv('./data/abalone.data', header=None)
-        columns = [
-            "Sex",
-            "Length",
-            "Diameter",
-            "Height",
-            "Whole weight",
-            "Shucked weight",
-            "Viscera weight",
-            "Shell weight",
-            "Rings",
-        ]
-        data.columns = columns
-        
-        assert data.isna().sum().sum() == 0
-        
-        columns.remove("Sex")
-        columns.remove("Rings")
-        continuous_features = columns
-        categorical_features = [
-            "Sex",
-            "Rings"
-        ]
-        integer_features = []
-        ClfTarget = "Rings"
-        
-    elif dataset == "anuran":
+    if dataset == "anuran":
         data = pd.read_csv('./data/Frogs_MFCCs.csv')
         
         assert data.isna().sum().sum() == 0
@@ -320,65 +293,5 @@ def load_raw_data(dataset):
         ]
         ClfTarget = "default_payment_next_month"    
 
-    elif dataset == "BAF":
-        # https://www.kaggle.com/datasets/sgpjesus/bank-account-fraud-dataset-neurips-2022/data
-        data = pd.read_csv('./data/BAF.csv')
-        
-        ### remove missing values
-        data = data.loc[data["prev_address_months_count"] != -1]
-        data = data.loc[data["current_address_months_count"] != -1]
-        data = data.loc[data["intended_balcon_amount"] >= 0]
-        data = data.loc[data["bank_months_count"] != -1]
-        data = data.loc[data["session_length_in_minutes"] != -1]
-        data = data.loc[data["device_distinct_emails_8w"] != -1]
-        data = data.reset_index(drop=True)
-        
-        assert data.isna().sum().sum() == 0
-        
-        continuous_features = [
-            'income', 
-            'name_email_similarity',
-            'prev_address_months_count', 
-            'current_address_months_count',
-            'days_since_request', 
-            'intended_balcon_amount',
-            'zip_count_4w', 
-            'velocity_6h', 
-            'velocity_24h',
-            'velocity_4w', 
-            'bank_branch_count_8w',
-            'date_of_birth_distinct_emails_4w', 
-            'credit_risk_score', 
-            'bank_months_count',
-            'proposed_credit_limit', 
-            'session_length_in_minutes', 
-        ]
-        categorical_features = [
-            'customer_age', 
-            'payment_type', 
-            'employment_status',
-            'email_is_free', 
-            'housing_status',
-            'phone_home_valid', 
-            'phone_mobile_valid', 
-            'has_other_cards', 
-            'foreign_request', 
-            'source',
-            'device_os', 
-            'keep_alive_session',
-            'device_distinct_emails_8w', 
-            'month',
-            'fraud_bool', 
-        ]
-        integer_features = [
-            'prev_address_months_count', 
-            'current_address_months_count',
-            'zip_count_4w', 
-            'bank_branch_count_8w',
-            'date_of_birth_distinct_emails_4w', 
-            'credit_risk_score', 
-            'bank_months_count',
-        ]
-        ClfTarget = "fraud_bool"    
                       
     return data, continuous_features, categorical_features, integer_features, ClfTarget

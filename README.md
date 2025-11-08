@@ -12,7 +12,7 @@ Download and add the datasets into `data` folder to reproduce our experimental r
 ## Reproducibility
 
 ### Arguments
-- `--dataset`: dataset options (`abalone`,  `anuran`, `banknote`, `breast`, `concrete`, `kings`,  `letter`, `loan`, `redwine`, `shoppers`, `whitewine`)
+- `--dataset`: dataset options (`anuran`, `banknote`, `breast`, `concrete`, `default`, `kings`,  `letter`, `loan`, `redwine`, `shoppers`, `whitewine`)
 - `--missing_type`: how to generate missing (`MCAR`, `MAR`, `MNARL`, `MNARQ`)
 - `--missing_rate`: missingness rate (default: `0.3`)--M
 - `--M`: the number of multiple imputation (default: `100`)
