@@ -3,7 +3,7 @@ This repository is the official implementation of `Impute Missing Entries with U
 > **_NOTE:_** This repository supports [WandB](https://wandb.ai/site) MLOps platform!
 
 ## Overview
-<img src="Figure.png" alt="image" width="700"/>
+<img src="DImVAE.pdf" alt="image" width="700"/>
 
 ## Dataset
 
