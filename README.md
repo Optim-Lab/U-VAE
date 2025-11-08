@@ -14,7 +14,7 @@ Download and add the datasets into `data` folder to reproduce our experimental r
 ### Arguments
 - `--dataset`: dataset options (`anuran`, `banknote`, `breast`, `concrete`, `default`, `kings`,  `letter`, `loan`, `redwine`, `shoppers`, `whitewine`)
 - `--missing_type`: how to generate missing (`MCAR`, `MAR`, `MNARL`, `MNARQ`)
-- `--missing_rate`: missingness rate (default: `0.3`)--M
+- `--missing_rate`: missingness rate (default: `0.3`)
 - `--M`: the number of multiple imputation (default: `100`)
 
 ### Training 
