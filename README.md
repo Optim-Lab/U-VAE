@@ -1,5 +1,5 @@
 # Impute Missing Entries with Uncertainty (U-VAE)
-This repository is the official implementation of `Impute Missing Entries with Uncertainty' (AAAI, 2026).
+This repository is the official implementation of 'Impute Missing Entries with Uncertainty' (AAAI, 2026).
 > **_NOTE:_** This repository supports [WandB](https://wandb.ai/site) MLOps platform!
 
 ## Overview
@@ -65,4 +65,9 @@ python imputer.py --dataset <dataset> --missing_type <missing_type> --missing_ra
 +-- U-VAE_supp.pdf
 +-- U-VAE.png
 +-- README.md
+```
+
+## Citation
+```
+
 ```
