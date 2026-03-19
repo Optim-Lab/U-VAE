@@ -68,6 +68,16 @@ python imputer.py --dataset <dataset> --missing_type <missing_type> --missing_ra
 ```
 
 ## Citation
-```
-
+```bibtex
+@article{Lim_An_Jeon_2026, 
+title={Impute Missing Entries with Uncertainty}, 
+volume={40},
+url={https://ojs.aaai.org/index.php/AAAI/article/view/39523},
+DOI={10.1609/aaai.v40i28.39523}, 
+number={28}, 
+journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+author={Lim, Jaesung and An, Seunghwan and Jeon, Jong-June}, 
+year={2026}, 
+month={Mar.}, 
+pages={23514-23522}}
 ```
